@@ -41,8 +41,8 @@ angular.module('xeditable').directive('editableTextarea', ['editableDirectiveFac
     });
 }]);
 
-angular.module('xeditable').directive('autoResize', function() {
-  return {
+angular.module('xeditable').directive('autoResize', function autoResize($timeout) {
+  return  {
       restrict: 'A',
       link: function autoResizeLink(scope, element, attributes, controller) {
           element.css({ 'height': 'auto', 'overflow-y': 'hidden' });
